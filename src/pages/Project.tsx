@@ -64,7 +64,7 @@ const ProjectContent = (project: IDataProject): JSX.Element => {
                     project.iframe &&
                     <div className="IFrame card box-shadow-2 overflow-hidden">
                         <div className="ratio ratio-16x9">
-                            <iframe src={project.iframe.src} title="YouTube video" allowFullScreen></iframe>
+                            <iframe src={project.iframe.src} title={`${project.name} - YouTube video`} allowFullScreen></iframe>
                         </div>
                     </div>
                 }
@@ -212,7 +212,7 @@ export const mapBlogs = (blogs: IDataProjectsBlog[], aside?: boolean): JSX.Eleme
 
                                 <div id={`${blog.buttonName}`} className="collapse">
                                     <div className="card-body">
-                                        <iframe src={`${blog.codeEmbed}`} className="w-100" height="315" />
+                                        <iframe src={`${blog.codeEmbed}`} title={blog.title} className="w-100" height="315" />
                                     </div>
                                 </div>
                             </div>

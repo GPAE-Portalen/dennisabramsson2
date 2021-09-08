@@ -29,9 +29,9 @@ export const Header = (): JSX.Element => {
                             <NavLink to="/projects" className="nav-link text-center px-4 mt-2 ms-lg-3 mt-lg-0">
                                 Projects
                             </NavLink>
-                            <a id="contact-btn-link" className="nav-link text-center px-4 mt-2 ms-lg-3 mt-lg-0" onClick={() => scrollTo('Footer')}>
+                            <button id="contact-btn-link" className="nav-link text-center px-4 mt-2 ms-lg-3 mt-lg-0" onClick={() => scrollTo('Footer')}>
                                 Contacts
-                            </a>
+                            </button>
                         </div>
 
                         {

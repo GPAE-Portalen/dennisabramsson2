@@ -46,37 +46,37 @@ export const FeaturedProjects = (): JSX.Element => {
     );
 };
 
-export const mapProjects = (projects: IDataProject[], projectsQuantity?: number): (JSX.Element | undefined)[] => {
-    return projects.map((project: IDataProject): JSX.Element | undefined => {
+export const mapProjects = (projects: IDataProject[], projectsQuantity?: number): JSX.Element[] => {
+    projects = projects.slice(0, projectsQuantity);
+
+    return projects.map((project: IDataProject) => {
         const { id, path, name, description, thumbnailFile } = project;
 
-        while (projects.indexOf(project) < (projectsQuantity ? projectsQuantity : projects.length)) {
-            return (
-                <div key={id} className="col-xl-4 col-lg-6 mb-4">
-                    <article className="card">
+        return (
+            <div key={id} className="col-xl-4 col-lg-6 mb-4">
+                <article className="card">
+                    {
+                        thumbnailFile &&
+                        <LazyLoadImage
+                            alt={thumbnailFile.alt}
+                            src={`${process.env.PUBLIC_URL}/${thumbnailFile.name}.${thumbnailFile.type}`}
+                            className="card-img-top"
+                        />
+                    }
+
+                    <div className="card-body">
+                        <h5 className="card-title">{name}</h5>
+
                         {
-                            thumbnailFile &&
-                            <LazyLoadImage
-                                alt={thumbnailFile.alt}
-                                src={`${process.env.PUBLIC_URL}/${thumbnailFile.name}.${thumbnailFile.type}`}
-                                className="card-img-top"
-                            />
+                            description && <p className="card-text text-truncate text-nowrap">{description}</p>
                         }
 
-                        <div className="card-body">
-                            <h5 className="card-title">{name}</h5>
-
-                            {
-                                description && <p className="card-text text-truncate text-nowrap">{description}</p>
-                            }
-
-                            <NavLink to={path} className="btn btn-primary stretched-link">
-                                Full details
-                            </NavLink>
-                        </div>
-                    </article>
-                </div>
-            );
-        }
+                        <NavLink to={path} className="btn btn-primary stretched-link">
+                            Full details
+                    </NavLink>
+                    </div>
+                </article>
+            </div>
+        );
     });
-};
+}
