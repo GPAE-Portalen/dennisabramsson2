@@ -1,0 +1,86 @@
+#App {
+    height: auto;
+    min-height: 100vh;
+}
+
+.box-shadow-1 {
+    box-shadow: $box-shadow1;
+    border: none;
+}
+.box-shadow-2 {
+    box-shadow: $box-shadow2;
+    border: none;
+}
+.box-shadow-3 {
+    box-shadow: $box-shadow3;
+    border: none;
+}
+.box-shadow-4 {
+    box-shadow: $box-shadow4;
+    border: none;
+}
+.box-shadow-5 {
+    box-shadow: $box-shadow5;
+    border: none;
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid $accent;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid $accent;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid $accent;
+    border-bottom: 50px solid transparent;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid $accent;
+    border-bottom: 50px solid transparent;
+}
+
+.triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 80px solid $accent;
+    border-right: 80px solid transparent;
+}
+
+.triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 80px solid $accent;
+    border-left: 80px solid transparent;
+}
+
+.triangle-bottomleft {
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid $accent;
+    border-right: 80px solid transparent;
+}
+
+.triangle-bottomright {
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid $accent;
+    border-left: 80px solid transparent;
+}
+  

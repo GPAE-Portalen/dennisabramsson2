@@ -1,0 +1,13 @@
+// Configuration
+@import "scss/variables";
+@import "scss/bootstrap/bootstrap";
+@import "scss/resets";
+@import "scss/base";
+
+// Pages
+@import "scss/pages/Projects";
+
+// Components
+@import "scss/components/Header";
+@import "scss/components/FeaturedProjects";
+@import "scss/components/Welcome";

@@ -1,0 +1,68 @@
+{
+  "name": "dennisabramsson2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "dev": "run-p start css-watch",
+    "start": "cross-env REACT_APP_DIST_ENV=development react-scripts start",
+    "build": "cross-env REACT_APP_DIST_ENV=production react-scripts build",
+    "test": "react-scripts test",
+    "css": "run-s css-build css-compile css-prefix",
+    "css-watch": "run-p css-watch-dev css-watch-min",
+    "css-watch-dev": "npm run css-build -- --watch",
+    "css-watch-min": "npm run css-compile -- --watch",
+    "css-build": "node-sass src/styles/index.scss src/styles/index.css",
+    "css-compile": "node-sass --output-style compressed src/styles/index.scss src/styles/index.min.css",
+    "css-prefix": "postcss --no-map --use autoprefixer --output src/styles/index.min.css src/styles/index.min.css"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.10.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "^6.1.2",
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/uuid": "^8.3.1",
+    "bootstrap": "^5.1.1",
+    "cross-env": "^7.0.3",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "typescript": "^4.4.2",
+    "uuid": "^8.3.2"
+  }
+}

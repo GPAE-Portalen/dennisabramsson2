@@ -1,0 +1,41 @@
+#Projects {
+
+    .card {
+        max-width: 800px;
+        box-shadow: $box-shadow2;
+        transition: all ease-in-out .25s;
+
+        &:hover {
+            box-shadow: $box-shadow5;
+            z-index: 500;
+            transform: scale(1.025);
+        }
+
+        @media(min-width: $lg) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        @media(min-width: $xl) {
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .btn-lg {
+        color: black;
+        border-color: black;
+        text-transform: uppercase;
+        border-width: medium;
+        box-shadow: $box-shadow3;
+        transition: box-shadow ease-in .1s;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            box-shadow: $box-shadow5;
+        }
+    }
+}

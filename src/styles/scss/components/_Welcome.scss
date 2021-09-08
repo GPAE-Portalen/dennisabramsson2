@@ -1,0 +1,10 @@
+.Welcome {
+}
+
+#front-title {
+    font-size: 52px;
+
+    @media(min-width: $md) {
+        font-size: 96px;
+    }
+}
